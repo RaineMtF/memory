@@ -29,7 +29,6 @@ def Main():
     backup_path = '../src/index.html.bak'
 
     try:
-        os.remove(backup_path)
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         os.rename(file_path, backup_path)
