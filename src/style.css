@@ -1,0 +1,138 @@
+body {
+  background: linear-gradient(135deg, #007bff, #ffb6ff);
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont,
+    "San Francisco", "Helvetica Neue", "Noto Sans", "Noto Sans CJK SC",
+    "Noto Sans CJK", "Source Han Sans", "PingFang SC", "Segoe UI",
+    "Microsoft YaHei", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.8em; /* 小字样式 */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+nav {
+  font-size: 0.9em;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-top: 80px; /* 确保内容不被头部遮挡 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 上面两列 */
+  gap: 20px; /* 列间距 */
+  padding: 20px; /* 内容内边距 */
+  flex-grow: 1; /* 使内容区域填满剩余空间 */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.large-card {
+  position: relative; /* 允许绝对定位头像 */
+  padding: 20px; /* 增加内边距 */
+}
+
+.avatar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 150px; /* 放大头像大小 */
+  height: 150px; /* 放大头像大小 */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3); /* 圆形背景 */
+  background-size: cover;
+  background-position: center;
+}
+
+.note {
+  font-size: 0.8em; /* 小字样式 */
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 10px; /* 增加左边距 */
+}
+
+.remark {
+  font-size: 11pt;
+  font-weight: normal;
+  align-items: center;
+  margin-left: 1ex; /* 确保内容不被头部遮挡 */
+}
+
+#remark3,
+#remark4,
+#remark5,
+#remark6 {
+  display: none;
+}
+
+.bottom-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 下方两个框并排 */
+  gap: 20px; /* 列间距 */
+}
+/*
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-content {
+    grid-template-columns: 1fr;
+  }
+}
+*/
