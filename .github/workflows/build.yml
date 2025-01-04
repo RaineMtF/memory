@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write  # Required for actions/upload-pages-artifact
+  pages: write     # Required for actions/deploy-pages
+  id-token: write  # Required for actions/deploy-pages
 
 jobs:
   build:
