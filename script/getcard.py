@@ -1,11 +1,11 @@
 def getcardl(i):
-    return ['岁月封华', 'BI4PBV', '岁月, BI4PBV/QBG', '2024-10-28', 1274, '山东青岛']
+    return ['名字', 'awa', '昵称', '2099-99-99', -1, '未知']
 
 def getcardr(i):
-    return ['岁月封华', 'BI4PBV', '岁月, BI4PBV/QBG', '2024-10-28', 1274, '山东青岛']
+    return ['名字', 'awa', '昵称', '2099-99-99', -1, '未知']
 
 def getimgl():
-    return 'https://data.one-among.us/people/BI4PBV/photos/profile.jpg'
+    return 'https://avatars.githubusercontent.com/u/192512683'
 
 def getimgr():
-    return 'https://data.one-among.us/people/BI4PBV/photos/profile.jpg'
+    return 'https://avatars.githubusercontent.com/u/192512683'
