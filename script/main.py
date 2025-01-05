@@ -57,15 +57,12 @@ def Main():
     file_path = '../src/index.html'
     backup_path = '../src/index.html.bak'
 
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-        os.rename(file_path, backup_path)
-        with open(file_path, 'w', encoding='utf-8') as file:
-            file.write(m_format(content))
-        print("文件处理完成")
-    except Exception as e:
-        print(f"处理文件时出错: {e}")
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    os.rename(file_path, backup_path)
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(m_format(content))
+    print("文件处理完成")
 
 if __name__ == "__main__":
     Main()
