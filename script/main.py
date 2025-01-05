@@ -3,27 +3,56 @@ import download
 import getcard
 
 def m_format(content):
-    # 在此处实现你的处理逻辑
-    card = []
-    for i in range(0, 3):
-        card.append(getcard.getcardl(i))
-    for i in range(0, 3):
-        card.append(getcard.getcardr(i))
-    img = [getcard.getimgl(), getcard.getimgr()]
+    card = [
+        getcard.getcardl(0),
+        getcard.getcardr(0),
+        getcard.getcardl(1),
+        getcard.getcardl(2),
+        getcard.getcardr(1),
+        getcard.getcardr(2)
+    ]
+
+    name = ['']
+    for i in range(0, 6):
+        name.append(card[i]['name'])
+
+    remark = ['']
+    for i in range(0, 6):
+        remark.append(card[i]['remark'])
+
+    nickname = ['']
+    for i in range(0, 6):
+        nickname.append(card[i]['nickname'])
+
+    date = ['']
+    for i in range(0, 6):
+        date.append(card[i]['date'])
+
+    countdown = ['']
+    for i in range(0, 6):
+        countdown.append(card[i]['countdown'])
+
+    region = ['']
+    for i in range(0, 6):
+        region.append(card[i]['region'])
+
+    img = ['']
+    for i in range(0, 6):
+        img.append(card[i]['img'])
+
     return content.format(
         subtitle = "小标题",
-        card1 = card[0],
-        card2 = card[1],
-        card3 = card[2],
-        card4 = card[3],
-        card5 = card[4],
-        card6 = card[5],
-        card1img = img[0],
-        card2img = img[1]
+        name = name,
+        remark = remark,
+        nickname = nickname,
+        date = date,
+        countdown = countdown,
+        region = region,
+        img = img
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 
 def Main():
-    download.Main()
+    # download.Main()
 
     file_path = '../src/index.html'
     backup_path = '../src/index.html.bak'
