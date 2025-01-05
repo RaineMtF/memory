@@ -12,43 +12,21 @@ def m_format(content):
         getcard.getcardr(2)
     ]
 
-    name = ['']
-    for i in range(0, 6):
-        name.append(card[i]['name'])
-
-    remark = ['']
-    for i in range(0, 6):
-        remark.append(card[i]['remark'])
-
-    nickname = ['']
-    for i in range(0, 6):
-        nickname.append(card[i]['nickname'])
-
-    date = ['']
-    for i in range(0, 6):
-        date.append(card[i]['date'])
-
-    countdown = ['']
-    for i in range(0, 6):
-        countdown.append(card[i]['countdown'])
-
-    region = ['']
-    for i in range(0, 6):
-        region.append(card[i]['region'])
-
-    img = ['']
-    for i in range(0, 6):
-        img.append(card[i]['img'])
+    def m_get(id):
+        return [''] + list(map(lambda i : i['id'], card[:6]))
 
     return content.format(
         subtitle = "小标题",
-        name = name,
-        remark = remark,
-        nickname = nickname,
-        date = date,
-        countdown = countdown,
-        region = region,
-        img = img
+        name = m_get('name'),
+        name_eng = m_get('name_eng'),
+        remark = m_get('remark'),
+        nickname = m_get('nickname'),
+        nickname_eng = m_get('nickname_eng'),
+        date = m_get('date'),
+        countdown = m_get('countdown'),
+        region = m_get('region'),
+        region_eng = m_get('region_eng'),
+        img = m_get('img')
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 
 def Main():
