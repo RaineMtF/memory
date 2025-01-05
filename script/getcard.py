@@ -9,7 +9,7 @@ def getcardl(i):
         'countdown': -1,
         'region': '未知',
         'region_eng': '>_<',
-        'img': 'https://avatars.githubusercontent.com/u/192512683'
+        'avatar': 'https://avatars.githubusercontent.com/u/192512683'
     }
 
 def getcardr(i):
@@ -23,5 +23,5 @@ def getcardr(i):
         'countdown': -1,
         'region': '未知',
         'region_eng': '>_<',
-        'img': 'https://avatars.githubusercontent.com/u/192512683'
+        'avatar': 'https://avatars.githubusercontent.com/u/192512683'
     }

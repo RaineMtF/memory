@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <title>Memory</title>
-  <link rel="stylesheet" href="./style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel='stylesheet' href='./style/sweetalert2.min.css'>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <header>
   <div class="title">
     <h1 class="main-title" id="mainTitle">记忆</h1>
@@ -21,7 +20,7 @@
 </header>
 <article class="content chn">
   <section class="card large-card" id="card1">
-    <div class="avatar" style="background-image: url({img[1]});"></div>
+    <div class="avatar" style="background-image: url({avatar[1]});"></div>
     <h2>{name[1]}<span class="remark">@{remark[1]}</span></h2>
     <p>昵称：{nickname[1]}</p>
     <p>逝世：{date[1]}</p>
@@ -29,7 +28,7 @@
     <p>地区：{region[1]}</p>
   </section>
   <section class="card large-card" id="card2">
-    <div class="avatar" style="background-image: url({img[2]});"></div>
+    <div class="avatar" style="background-image: url({avatar[2]});"></div>
     <h2>{name[2]}<span class="remark">@{remark[2]}</span></h2>
     <p>昵称：{nickname[2]}</p>
     <p>出生：{date[2]}</p>
@@ -71,7 +70,7 @@
 </article>
 <article class="content eng hidden">
   <section class="card large-card" id="card1_eng">
-    <div class="avatar" style="background-image: url({img[1]});"></div>
+    <div class="avatar" style="background-image: url({avatar[1]});"></div>
     <h2>{name_eng[1]}<span class="remark">@{remark[1]}</span></h2>
     <p>Nickname: {nickname_eng[1]}</p>
     <p>Departed: {date[1]}</p>
@@ -79,7 +78,7 @@
     <p>Location: {region_eng[1]}</p>
   </section>
   <section class="card large-card" id="card2_eng">
-    <div class="avatar" style="background-image: url({img[2]});"></div>
+    <div class="avatar" style="background-image: url({avatar[2]});"></div>
     <h2>{name_eng[2]}<span class="remark">@{remark[2]}</span></h2>
     <p>Nickname: {nickname_eng[2]}</p>
     <p>Born: {date[2]}</p>
@@ -119,8 +118,9 @@
     </section>
   </div>
 </article>
-<!-- partial -->
-  <script type="module" src="./script.js"></script>
-
+<script src='./script/jquery.min.js'></script>
+<script src='./script/sweetalert2.min.js'></script>
+<script type="module" src="./script/script.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bf71326f88c94c8ea945b4bed2f9a1ca"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

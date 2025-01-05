@@ -1,5 +1,3 @@
-import $ from "https://esm.sh/jquery";
-
 // 设置标题和卡片信息
 // document.getElementById("mainTitle").innerText = "动态标题";
 // document.getElementById("subtitle").innerText = "小标题";

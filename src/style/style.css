@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(135deg, #007bff, #ffb6ff);
-  /*   background-image: url("background.jpg"); */
+  background-image: url("img/background.jpg");
   background-size: cover;
   background-position: center;
   color: white;

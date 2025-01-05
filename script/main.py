@@ -26,7 +26,7 @@ def m_format(content):
         countdown = m_get('countdown'),
         region = m_get('region'),
         region_eng = m_get('region_eng'),
-        img = m_get('img')
+        avatar = m_get('avatar')
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 
 def Main():
