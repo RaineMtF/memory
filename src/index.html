@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Memory</title>
   <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
@@ -18,60 +19,108 @@
     <a id="to_chn" href="#">简体中文</a>
   </nav>
 </header>
-<div class="content">
-  <div class="card large-card" id="card1">
-    <div class="avatar" style="background-image: url({card1img});"></div>
-    <h2><span id="name1">{card1[0]}</span><span class="remark"><span>@</span><span id="remark1">{card1[1]}</span></span></h2>
-    <p><span class="nickname">昵称</span>：{card1[2]}</p>
-    <p><span class="datel">逝世</span>：{card1[3]}</p>
-    <p><span class="countdown">倒计时</span>：{card1[4]}</p>
-    <p><span class="region">地区</span>：{card1[5]}</p>
-  </div>
-  <div class="card large-card" id="card2">
-    <div class="avatar" style="background-image: url({card2img});"></div>
-    <h2><span id="name2">{card2[0]}</span><span class="remark"><span>@</span><span id="remark2">{card2[1]}</span></span></h2>
-    <p><span class="nickname">昵称</span>：{card2[2]}</p>
-    <p><span class="datel">逝世</span>：{card2[3]}</p>
-    <p><span class="countdown">倒计时</span>：{card2[4]}</p>
-    <p><span class="region">地区</span>：{card2[5]}</p>
-  </div>
-  <div class="bottom-content">
-    <div class="card" id="card3">
-      <h2 id="name3">{card3[0]}</h2>
-      <span id="remark3">{card3[1]}</span>
-      <p><span class="nickname">昵称</span>：{card3[2]}</p>
-      <p><span class="datel">逝世</span>：{card3[3]}</p>
-      <p><span class="countdown">倒计时</span>：{card3[4]}</p>
-      <p><span class="region">地区</span>：{card3[5]}</p>
+<article>
+  <section class="content chn">
+    <div class="card large-card" id="card1">
+      <div class="avatar" style="background-image: url({img[1]});"></div>
+      <h2>{name[1]}<span class="remark">@{remark[1]}</span></h2>
+      <p>昵称：{nickname[1]}</p>
+      <p>逝世：{date[1]}</p>
+      <p>倒计时：{countdown[1]} 天</p>
+      <p>地区：{region[1]}</p>
     </div>
-    <div class="card" id="card4">
-      <h2 id="name4">{card4[0]}</h2>
-      <span id="remark4">{card4[1]}</span>
-      <p><span class="nickname">昵称</span>：{card4[2]}</p>
-      <p><span class="datel">逝世</span>：{card4[3]}</p>
-      <p><span class="countdown">倒计时</span>：{card4[4]}</p>
-      <p><span class="region">地区</span>：{card4[5]}</p>
+    <div class="card large-card" id="card2">
+      <div class="avatar" style="background-image: url({img[2]});"></div>
+      <h2>{name[2]}<span class="remark">@{remark[2]}</span></h2>
+      <p>昵称：{nickname[2]}</p>
+      <p>出生：{date[2]}</p>
+      <p>倒计时：{countdown[2]} 天</p>
+      <p>地区：{region[2]}</p>
     </div>
-  </div>
-  <div class="bottom-content">
-    <div class="card" id="card5">
-      <h2 id="name5">{card5[0]}</h2>
-      <span id="remark5">{card5[1]}</span>
-      <p><span class="nickname">昵称</span>：{card5[2]}</p>
-      <p><span class="dater">出生</span>：{card5[3]}</p>
-      <p><span class="countdown">倒计时</span>：{card5[4]}</p>
-      <p><span class="region">地区</span>：{card5[5]}</p>
+    <div class="bottom-content">
+      <div class="card" id="card3">
+        <h2>{name[3]}<span class="remark hidden">@{remark[3]}</span></h2>
+        <p>昵称：{nickname[3]}</p>
+        <p>逝世：{date[3]}</p>
+        <p>倒计时：{countdown[3]} 天</p>
+        <p>地区：{region[3]}</p>
+      </div>
+      <div class="card" id="card4">
+        <h2>{name[4]}<span class="remark hidden">@{remark[4]}</span></h2>
+        <p>昵称：{nickname[4]}</p>
+        <p>逝世：{date[4]}</p>
+        <p>倒计时：{countdown[4]} 天</p>
+        <p>地区：{region[4]}</p>
+      </div>
     </div>
-    <div class="card" id="card6">
-      <h2 id="name6">{card6[0]}</h2>
-      <span id="remark6">{card6[1]}</span>
-      <p><span class="nickname">出生</span>：{card6[2]}</p>
-      <p><span class="dater">逝世</span>：{card6[3]}</p>
-      <p><span class="countdown">倒计时</span>：{card6[4]}</p>
-      <p><span class="region">地区</span>：{card6[5]}</p>
+    <div class="bottom-content">
+      <div class="card" id="card5">
+        <h2>{name[5]}<span class="remark hidden">@{remark[5]}</span></h2>
+        <p>昵称：{nickname[5]}</p>
+        <p>出生：{date[5]}</p>
+        <p>倒计时：{countdown[5]} 天</p>
+        <p>地区：{region[5]}</p>
+      </div>
+      <div class="card" id="card6">
+        <h2>{name[6]}<span class="remark hidden">@{remark[6]}</span></h2>
+        <p>昵称：{nickname[6]}</p>
+        <p>出生：{date[6]}</p>
+        <p>倒计时：{countdown[6]} 天</p>
+        <p>地区：{region[6]}</p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+  <section class="content eng">
+    <div class="card large-card" id="card1">
+      <div class="avatar" style="background-image: url({img[1]});"></div>
+      <h2>{name[1]}<span class="remark">@{remark[1]}</span></h2>
+      <p>Nickname: {nickname[1]}</p>
+      <p>Departed: {date[1]}</p>
+      <p>Countdown: {countdown[1]} day(s)</p>
+      <p>Location: {region[1]}</p>
+    </div>
+    <div class="card large-card" id="card2">
+      <div class="avatar" style="background-image: url({img[2]});"></div>
+      <h2>{name[2]}<span class="remark">@{remark[2]}</span></h2>
+      <p>Nickname: {nickname[2]}</p>
+      <p>Born: {date[2]}</p>
+      <p>Countdown: {countdown[2]} day(s)</p>
+      <p>Location: {region[2]}</p>
+    </div>
+    <div class="bottom-content">
+      <div class="card" id="card3">
+        <h2>{name[3]}<span class="remark hidden">@{remark[3]}</span></h2>
+        <p>Nickname: {nickname[3]}</p>
+        <p>Departed: {date[3]}</p>
+        <p>Countdown: {countdown[3]} day(s)</p>
+        <p>Location: {region[3]}</p>
+      </div>
+      <div class="card" id="card4">
+        <h2>{name[4]}<span class="remark hidden">@{remark[4]}</span></h2>
+        <p>Nickname: {nickname[4]}</p>
+        <p>Departed: {date[4]}</p>
+        <p>Countdown: {countdown[4]} day(s)</p>
+        <p>Location: {region[4]}</p>
+      </div>
+    </div>
+    <div class="bottom-content">
+      <div class="card" id="card5">
+        <h2>{name[5]}<span class="remark hidden">@{remark[5]}</span></h2>
+        <p>Nickname: {nickname[5]}</p>
+        <p>Born: {date[5]}</p>
+        <p>Countdown: {countdown[5]} day(s)</p>
+        <p>Location: {region[5]}</p>
+      </div>
+      <div class="card" id="card6">
+        <h2>{name[6]}<span class="remark hidden">@{remark[6]}</span></h2>
+        <p>Nickname: {nickname[6]}</p>
+        <p>Born: {date[6]}</p>
+        <p>Countdown: {countdown[6]} day(s)</p>
+        <p>Location: {region[6]}</p>
+      </div>
+    </div>
+  </section>
+</article>
 <!-- partial -->
   <script type="module" src="./script.js"></script>
 
