@@ -13,7 +13,7 @@ def m_format(content):
     ]
 
     def m_get(id):
-        return [''] + list(map(lambda i : i[id], card[:6]))
+        return [''] + [i[id] for i in card]
 
     return content.format(
         subtitle = "小标题",
