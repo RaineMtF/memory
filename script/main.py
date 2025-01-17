@@ -1,0 +1,46 @@
+import os
+import getcard
+
+def m_format(content):
+    card = [
+        getcard.getcard_b(0),
+        getcard.getcard_d(0),
+        getcard.getcard_b(1),
+        getcard.getcard_b(2),
+        getcard.getcard_d(1),
+        getcard.getcard_d(2)
+    ]
+
+    def m_get(id):
+        return [''] + [i[id] for i in card]
+
+    return content.format(
+        subtitle = "小标题",
+        name = m_get('name'),
+        name_eng = m_get('name_eng'),
+        id = m_get('id'),
+        alias = m_get('alias'),
+        alias_eng = m_get('alias_eng'),
+        date = m_get('date'),
+        age = m_get('age'),
+        countdown = m_get('countdown'),
+        location = m_get('location'),
+        location_eng = m_get('location_eng'),
+        avatar = m_get('avatar')
+    ) + "\n\n<!-- 这个页面是自动生成的 -->"
+
+def Main():
+    file_path = '../src/index.html'
+    backup_path = '../src/index.html.bak'
+
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    os.rename(file_path, backup_path)
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(m_format(content))
+    print("文件处理完成")
+    
+    os.remove(backup_path)
+
+if __name__ == "__main__":
+    Main()
