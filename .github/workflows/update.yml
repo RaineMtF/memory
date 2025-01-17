@@ -1,0 +1,35 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: Update Data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Dependencies
+        run: pip install -r ./requirements.txt
+      - name: Update Data
+        run: |
+          cd script
+          python download.py
+      - name: Upload File
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git add .
+            git commit -m "Update Submodule"
+            git push
+          else
+            echo Pass
+          fi

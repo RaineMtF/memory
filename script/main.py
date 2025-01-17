@@ -1,15 +1,14 @@
 import os
-import download
 import getcard
 
 def m_format(content):
     card = [
-        getcard.getcardl(0),
-        getcard.getcardr(0),
-        getcard.getcardl(1),
-        getcard.getcardl(2),
-        getcard.getcardr(1),
-        getcard.getcardr(2)
+        getcard.getcard_b(0),
+        getcard.getcard_d(0),
+        getcard.getcard_b(1),
+        getcard.getcard_b(2),
+        getcard.getcard_d(1),
+        getcard.getcard_d(2)
     ]
 
     def m_get(id):
@@ -19,19 +18,18 @@ def m_format(content):
         subtitle = "小标题",
         name = m_get('name'),
         name_eng = m_get('name_eng'),
-        remark = m_get('remark'),
-        nickname = m_get('nickname'),
-        nickname_eng = m_get('nickname_eng'),
+        id = m_get('id'),
+        alias = m_get('alias'),
+        alias_eng = m_get('alias_eng'),
         date = m_get('date'),
+        age = m_get('age'),
         countdown = m_get('countdown'),
-        region = m_get('region'),
-        region_eng = m_get('region_eng'),
+        location = m_get('location'),
+        location_eng = m_get('location_eng'),
         avatar = m_get('avatar')
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 
 def Main():
-    # download.Main()
-
     file_path = '../src/index.html'
     backup_path = '../src/index.html.bak'
 
@@ -41,6 +39,8 @@ def Main():
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(m_format(content))
     print("文件处理完成")
+    
+    os.remove(backup_path)
 
 if __name__ == "__main__":
     Main()

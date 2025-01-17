@@ -1,27 +1,29 @@
-def getcardl(i):
+def getcard_b(i):
     return {
         'name': '名字',
-        'name_eng': 'Unknown',
-        'remark': 'awa',
-        'nickname': '这是昵称',
-        'nickname_eng': 'meow',
+        'name_en': 'Unknown',
+        'id': 'awa',
+        'alias': '这是昵称',
+        'alias_en': 'meow',
         'date': '2099-99-99',
+        'age': 100,
         'countdown': -1,
-        'region': '未知',
-        'region_eng': '>_<',
+        'location': '未知',
+        'location_en': '>_<',
         'avatar': 'https://avatars.githubusercontent.com/u/192512683'
     }
 
-def getcardr(i):
+def getcard_d(i):
     return {
         'name': '名字',
-        'name_eng': 'Unknown',
-        'remark': 'awa',
-        'nickname': '这是昵称',
-        'nickname_eng': 'meow',
+        'name_en': 'Unknown',
+        'id': 'awa',
+        'alias': '这是昵称',
+        'alias_en': 'meow',
         'date': '2099-99-99',
+        'age': 100,
         'countdown': -1,
-        'region': '未知',
-        'region_eng': '>_<',
+        'location': '未知',
+        'location_en': '>_<',
         'avatar': 'https://avatars.githubusercontent.com/u/192512683'
     }
