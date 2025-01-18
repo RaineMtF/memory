@@ -1,17 +1,6 @@
 import os
-import requests
+import common
 import json
-
-def fetch_json(url):
-    response = requests.get(url)
-    response.raise_for_status()
-    data = response.json()
-    return data
-
-def load_json(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        data = json.load(file)
-    return data
 
 ren = {
     '出生': 'born',
@@ -27,8 +16,8 @@ ren = {
 }
 
 def get_json(path):
-    info = load_json(f'./data/people/{path}/info.json')
-    info_en = load_json(f'./data/people/{path}/info.en.json')
+    info = common.load_json(f'./data/people/{path}/info.json')
+    info_en = common.load_json(f'./data/people/{path}/info.en.json')
 
     data = {}
     for item in info['info']:
@@ -64,7 +53,7 @@ def get_json(path):
 def Main():
     content = []
     os.system('git clone https://github.com/one-among-us/data.git --single-branch --branch gh-pages --depth=1')
-    for item in load_json('./data/people-home-list.json'):
+    for item in common.load_json('./data/people-home-list.json'):
         content.append(get_json(item['path']))
     # print(content)
     with open('people.json', 'w', encoding='utf-8') as file:
