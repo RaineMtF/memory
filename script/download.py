@@ -42,7 +42,7 @@ def get_json(path):
         'age': m_get(data, 'age', 'N/A'),
         'location': m_get(data, 'location', '未知'),
         'location_en': m_get(data_en, 'location', 'Unknown'),
-        'avatar': './' + info['profileUrl'].format(path=path)[1:]
+        'avatar': 'https://data.one-among.us/people/' + info['profileUrl'].format(path=path)[1:]
     }
 
     return content
