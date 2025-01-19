@@ -17,15 +17,15 @@ def m_format(content):
     return content.format(
         subtitle = "小标题",
         name = m_get('name'),
-        name_eng = m_get('name_eng'),
+        name_en = m_get('name_en'),
         id = m_get('id'),
         alias = m_get('alias'),
-        alias_eng = m_get('alias_eng'),
+        alias_en = m_get('alias_en'),
         date = m_get('date'),
         age = m_get('age'),
         countdown = m_get('countdown'),
         location = m_get('location'),
-        location_eng = m_get('location_eng'),
+        location_en = m_get('location_en'),
         avatar = m_get('avatar')
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 

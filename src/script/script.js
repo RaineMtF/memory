@@ -3,14 +3,14 @@
 // document.getElementById("subtitle").innerText = "小标题";
 
 $(document).ready(function () {
-  $("#to_eng").click(function (event) {
+  $("#to_en").click(function (event) {
     event.preventDefault();
-    $(".chn").addClass("hidden");
-    $(".eng").removeClass("hidden");
+    $(".ch").addClass("hidden");
+    $(".en").removeClass("hidden");
   });
-  $("#to_chn").click(function (event) {
+  $("#to_ch").click(function (event) {
     event.preventDefault();
-    $(".eng").addClass("hidden");
-    $(".chn").removeClass("hidden");
+    $(".en").addClass("hidden");
+    $(".ch").removeClass("hidden");
   });
 });
