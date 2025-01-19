@@ -21,18 +21,22 @@ def m_cmp_to_key(mycmp):
     return K
 
 def cmp_date(a, b, key):
-    if a[key] == 'None':
+    if a[key] == 'N/A':
         return False
-    if b[key] == 'None':
+    if b[key] == 'N/A':
         return True
     return get_countdown(a[key]) < get_countdown(b[key])
 
 def cmp_b(a, b):
     return cmp_date(a, b, 'born')
-def getcard_b(i):
-    return sorted(load_card(), key=m_cmp_to_key(cmp_b))[i]
-
 def cmp_d(a, b):
     return cmp_date(a, b, 'departed')
+
+def getcard_b(i):
+    data = sorted(load_card(), key=m_cmp_to_key(cmp_b))[i]
+    data['date'] = data['born']
+    return data
 def getcard_d(i):
-    return sorted(load_card(), key=m_cmp_to_key(cmp_d))[i]
+    data = sorted(load_card(), key=m_cmp_to_key(cmp_d))[i]
+    data['date'] = data['departed']
+    return data
