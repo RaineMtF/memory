@@ -1,6 +1,5 @@
 import os
 import common
-import json
 
 ren = {
     '出生': 'born',
@@ -46,8 +45,6 @@ def get_json(path):
         'avatar': './' + info['profileUrl'].format(path=path)[1:]
     }
 
-    # print(path, content)
-    
     return content
 
 def Main():
@@ -55,9 +52,7 @@ def Main():
     os.system('git clone https://github.com/one-among-us/data.git --single-branch --branch gh-pages --depth=1')
     for item in common.load_json('./data/people-home-list.json'):
         content.append(get_json(item['path']))
-    # print(content)
-    with open('people.json', 'w', encoding='utf-8') as file:
-        json.dump(content, file, ensure_ascii=False, indent=4)
+    common.write_json('people.json', content)
 
 if __name__ == "__main__":
     Main()
