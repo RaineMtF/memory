@@ -6,8 +6,11 @@ def load_card():
 
 def get_countdown(target):
     today = datetime.now()
+    today = datetime(today.year, today.month, today.day)
+
     target = datetime.strptime(target, "%Y-%m-%d")
     target = datetime(today.year, target.month, target.day)
+
     if target < today:
         target = datetime(target.year + 1, target.month, target.day)
     return (target - today).days

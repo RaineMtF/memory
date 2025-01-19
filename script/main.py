@@ -1,5 +1,6 @@
 import os
 import getcard
+from datetime import datetime
 
 def m_format(content):
     card = [
@@ -15,7 +16,7 @@ def m_format(content):
         return [''] + [i[id] for i in card]
 
     return content.format(
-        subtitle = "小标题",
+        subtitle = f"此页面于 {str(datetime.now())} 生成",
         name = m_get('name'),
         name_en = m_get('name_en'),
         id = m_get('id'),
@@ -30,6 +31,8 @@ def m_format(content):
     ) + "\n\n<!-- 这个页面是自动生成的 -->"
 
 def Main():
+    print(datetime.now())
+
     file_path = '../src/index.html'
     backup_path = '../src/index.html.bak'
 
