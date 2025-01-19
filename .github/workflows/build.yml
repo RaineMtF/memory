@@ -11,15 +11,11 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Page Build
+  update:
+    name: Update Data
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Config Git
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -30,11 +26,11 @@ jobs:
         run: |
           cd script
           python download.py
-      - name: Page Build
+      - name: Config Git
         run: |
-          cd script
-          python main.py
-      - name: Upload Data
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Upload File
         run: |
           if [[ `git status --porcelain` ]]; then
             git add .
@@ -43,6 +39,22 @@ jobs:
           else
             echo Pass
           fi
+  build:
+    name: Page Build
+    runs-on: ubuntu-latest
+    needs: split-tag
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Dependencies
+        run: pip install -r ./requirements.txt
+      - name: Page Build
+        run: |
+          cd script
+          python main.py
       - name: Upload Artifacts
         id: deployment
         uses: actions/upload-pages-artifact@v3
