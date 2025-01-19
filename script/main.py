@@ -4,12 +4,12 @@ from datetime import datetime
 
 def m_format(content):
     card = [
-        getcard.getcard_b(0),
         getcard.getcard_d(0),
-        getcard.getcard_b(1),
-        getcard.getcard_b(2),
+        getcard.getcard_b(0),
         getcard.getcard_d(1),
-        getcard.getcard_d(2)
+        getcard.getcard_d(2),
+        getcard.getcard_b(1),
+        getcard.getcard_b(2)
     ]
 
     def m_get(id):
