@@ -17,6 +17,7 @@ def m_format(content):
 
     return content.format(
         subtitle = f"此页面于 {str(datetime.now())} 生成",
+        timestamp = datetime.now().strftime("%Y-%m-%d"),
         name = m_get('name'),
         name_en = m_get('name_en'),
         id = m_get('id'),
