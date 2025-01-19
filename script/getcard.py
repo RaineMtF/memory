@@ -35,8 +35,10 @@ def cmp_d(a, b):
 def getcard_b(i):
     data = sorted(load_card(), key=m_cmp_to_key(cmp_b))[i]
     data['date'] = data['born']
+    data['countdown'] = get_countdown(data['date'])
     return data
 def getcard_d(i):
     data = sorted(load_card(), key=m_cmp_to_key(cmp_d))[i]
     data['date'] = data['departed']
+    data['countdown'] = get_countdown(data['date'])
     return data
