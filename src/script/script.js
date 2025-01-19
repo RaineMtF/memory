@@ -5,12 +5,12 @@
 $(document).ready(function () {
   $("#to_en").click(function (event) {
     event.preventDefault();
-    $(".ch").addClass("hidden");
+    $(".cn").addClass("hidden");
     $(".en").removeClass("hidden");
   });
-  $("#to_ch").click(function (event) {
+  $("#to_cn").click(function (event) {
     event.preventDefault();
     $(".en").addClass("hidden");
-    $(".ch").removeClass("hidden");
+    $(".cn").removeClass("hidden");
   });
 });
