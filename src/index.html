@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='./style/sweetalert2.min.css'>
   <link rel="stylesheet" href="./style/style.css">
+  <!--[if lt IE 9]>
+	<script src="./script/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header>
@@ -134,19 +137,19 @@
 <script src='./script/sweetalert2.min.js'></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "bf71326f88c94c8ea945b4bed2f9a1ca"}}'></script><!-- End Cloudflare Web Analytics -->
 <script defer>
-  $(document).ready(function () {
+  $(document).ready(function () {{
     const today = new Date();
-    if (today.toISOString().split('T')[0] !== {timestamp}) {
-      Swal.fire({
+    if (today.toISOString().split('T')[0] !== {timestamp}) {{
+      Swal.fire({{
         title: '警告',
         text: '生成时间与本地实际不符，可能是本地与服务器时区不一致，请等待若干小时以跟进 UTC 时间。',
         icon: 'warning',
         confirmButtonText: '确定',
         draggable: true,
         footer: '<a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E5%8C%BA">「维基百科」什么是时区？</a>'
-      });
-    }
-  });
+      }});
+    }}
+  }});
 </script>
 </body>
 </html>
