@@ -136,10 +136,11 @@
 <script src='./script/jquery.min.js'></script>
 <script src='./script/sweetalert2.min.js'></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "bf71326f88c94c8ea945b4bed2f9a1ca"}}'></script><!-- End Cloudflare Web Analytics -->
+<script src='./script/script.js'></script>
 <script defer>
   $(document).ready(function () {{
     const today = new Date();
-    if (today.toISOString().split('T')[0] !== {timestamp}) {{
+    if (today.toISOString().split('T')[0] !== "{timestamp}") {{
       Swal.fire({{
         title: '警告',
         text: '生成时间与本地实际不符，可能是本地与服务器时区不一致，请等待若干小时以跟进 UTC 时间。',
