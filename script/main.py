@@ -16,7 +16,7 @@ def m_format(content):
         return [''] + [i[id] for i in card]
 
     return content.format(
-        subtitle = f"此页面于 {str(datetime.now())} 生成",
+        subtitle = f"此页面于 {str(datetime.now())} UTC 生成",
         timestamp = datetime.now().strftime("%Y-%m-%d"),
         name = m_get('name'),
         name_en = m_get('name_en'),
