@@ -143,7 +143,7 @@
     if (today.toISOString().split('T')[0] !== "{timestamp}") {{
       Swal.fire({{
         title: '警告',
-        text: '生成时间与本地实际不符，可能是本地与服务器时区不一致，请等待若干小时以跟进 UTC 时间。',
+        text: '生成时间与本地实际不符，可能是本地与服务器时区不一致，或者构建运行延时（预计延时会在一两个小时左右），请等待若干小时以跟进 UTC 时间。',
         icon: 'warning',
         confirmButtonText: '确定',
         draggable: true,
