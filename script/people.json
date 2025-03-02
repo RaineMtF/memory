@@ -1,5 +1,18 @@
 [
     {
+        "id": "TianqiChen666",
+        "name": "めんま",
+        "name_en": "めんま",
+        "alias": "面码, Menma",
+        "alias_en": "Menma",
+        "born": "2006-01-23",
+        "departed": "2025-02-26",
+        "age": 19,
+        "location": "四川成都",
+        "location_en": "Chengdu,Sichuan",
+        "avatar": "https://data.one-among.us/people/TianqiChen666/photos/profile.jpg"
+    },
+    {
         "id": "cheonwoomaeng",
         "name": "莉绪",
         "name_en": "Rio",
@@ -89,6 +102,19 @@
         "location": "中国广东",
         "location_en": "Guangdong, China",
         "avatar": "https://data.one-among.us/people/TLL1122/photos/profile.jpg"
+    },
+    {
+        "id": "AmbeR_the_anpa",
+        "name": "安帕",
+        "name_en": "Anpa",
+        "alias": "AmbeR_the_安帕, 琥珀",
+        "alias_en": "AmbeR_the_Anpa, amber",
+        "born": "2004-09-01",
+        "departed": "2024-09-17",
+        "age": 20,
+        "location": "日本东京",
+        "location_en": "Tokyo, Japan",
+        "avatar": "https://data.one-among.us/people/AmbeR_the_anpa/photos/profile.jpg"
     },
     {
         "id": "luxuanwen3",
