@@ -1,5 +1,31 @@
 [
     {
+        "id": "gqt",
+        "name": "Ara",
+        "name_en": "Ara",
+        "alias": "Gqt, Aragqt",
+        "alias_en": "gqt, aragqt",
+        "born": "2003-02-21",
+        "departed": "2025-06-22",
+        "age": 22,
+        "location": "法国巴黎",
+        "location_en": "Paris, France",
+        "avatar": "https://data.one-among.us/people/gqt/photos/profile.jpg"
+    },
+    {
+        "id": "Huasheng",
+        "name": "椛笙",
+        "name_en": "Huasheng",
+        "alias": "花生, 椛笙酱, 椛基兔sss",
+        "alias_en": "Huasheng(Peanut), Little Huasheng",
+        "born": "2006-07-04",
+        "departed": "2025-04-01",
+        "age": 18,
+        "location": "江苏南通",
+        "location_en": "Nantong, Jiangsu",
+        "avatar": "https://data.one-among.us/people/Huasheng/photos/profile.jpg"
+    },
+    {
         "id": "TianqiChen666",
         "name": "めんま",
         "name_en": "Menma",
