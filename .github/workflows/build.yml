@@ -58,7 +58,7 @@ jobs:
           python main.py
       - name: Upload Artifacts
         id: deployment
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: src/
   deploy:
