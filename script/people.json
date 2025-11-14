@@ -13,6 +13,19 @@
         "avatar": "https://data.one-among.us/people/gqt/photos/profile.jpg"
     },
     {
+        "id": "LCG_Akiball",
+        "name": "Akiball",
+        "name_en": "Akiball",
+        "alias": "Aki",
+        "alias_en": "Aki",
+        "born": "2007-02-12",
+        "departed": "2025-06-19",
+        "age": 18,
+        "location": "澳大利亚墨尔本",
+        "location_en": "Melbourne, Australia",
+        "avatar": "https://data.one-among.us/people/LCG_Akiball/photos/profile.jpg"
+    },
+    {
         "id": "Huasheng",
         "name": "椛笙",
         "name_en": "Huasheng",
@@ -37,6 +50,19 @@
         "location": "四川成都",
         "location_en": "Chengdu, Sichuan",
         "avatar": "https://data.one-among.us/people/TianqiChen666/photos/profile.jpg"
+    },
+    {
+        "id": "MTF_0615",
+        "name": "槿彧",
+        "name_en": "Jin Yu",
+        "alias": "昸槿",
+        "alias_en": "Dong Jin",
+        "born": "2008-06-15",
+        "departed": "2024-12-11",
+        "age": 16,
+        "location": "中国内蒙古",
+        "location_en": "Inner Mongolia, China",
+        "avatar": "https://data.one-among.us/people/MTF_0615/photos/profile.png"
     },
     {
         "id": "cheonwoomaeng",
